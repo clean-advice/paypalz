@@ -1,0 +1,76 @@
+﻿@page
+@using System.Globalization
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form action="/index" method="post" asp-antiforgery="true">
+    <legend>Tax Calculator</legend>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="input-group input-group-md">
+                <label for="PostalCode" class="control-label col-md-4">Postal Code:</label>
+                @*<select asp-for="@Model.PostalCodes" asp-items="@Model.PostalCodes">
+                    <option value="0">Please select</option>
+                </select>*@
+
+                @Html.DropDownListFor(model => model.PostalCodes, @Model.PostalCodes, "-- Select Postal Code --")
+            </div>
+            <div class="input-group input-group-md">
+                <span asp-validation-for="@Model.TaxCalculationModel.PostalCode" class="col-xs-3 text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="input-group input-group-md">
+                <label for="Salary" class="control-label col-md-4">Salary:</label>
+                <input class="form-control col-md-3" asp-for="@Model.TaxCalculationModel.Salary" />
+            </div>
+            <div class="input-group input-group-md">
+                <span asp-validation-for="@Model.TaxCalculationModel.Salary" class="col-xs-3 text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="input-group input-group-md">
+                <button type="submit" class="btn btn-primary">Calculate</button>
+            </div>
+        </div>
+    </div>
+    @Html.HiddenFor(x => x.TaxCalculationModel.PostalCode)
+</form>
+@{
+    if (/*IsPost && */!string.IsNullOrWhiteSpace(@Model.TaxPayable))
+    {
+        <legend>Tax Calculation Result</legend>
+        <div class="form-group">
+            <div class="col-xs-2">
+                <label for="PostalCode" class="control-label col-md-1">Postal Code:</label>
+                <label for="PostalCodeValue" class="control-label col-md-2">@Model.PostalCode</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-2">
+                <label for="Salary" class="control-label col-md-1">Salary:</label>
+                <label for="SalaryValue" class="control-label col-md-2">@Model.Salary</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-2">
+                <label for="TaxPayable" class="control-label col-md-1">TaxPayable:</label>
+                <label for="TaxPayableValue" class="control-label col-md-2">@Model.TaxPayable</label>
+            </div>
+        </div>
+    }
+}
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+<script type="text/javascript">
+    $("body").on("change", "#PostalCodes", function () {
+        $("#TaxCalculationModel_PostalCode").val($(this).find("option:selected").text());
+    });
+</script>

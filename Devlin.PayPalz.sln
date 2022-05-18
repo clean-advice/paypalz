@@ -1,0 +1,93 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0D2A47BE-EA9B-41DF-A5D0-5E0A6235A9F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C07888BA-58CF-4EF3-8E8D-A1E53862EE09}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devlin.PayPalz.Web", "src\Devlin.PayPalz.Web\Devlin.PayPalz.Web.csproj", "{2173823E-2B3C-4288-AA4D-F3CB061E0B8E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devlin.PayPalz.Infrastructure", "src\Devlin.PayPalz.Infrastructure\Devlin.PayPalz.Infrastructure.csproj", "{4F428927-74A3-4183-A700-276CEEAA56E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devlin.PayPalz.Core", "src\Devlin.PayPalz.Core\Devlin.PayPalz.Core.csproj", "{EC47D9CC-A264-4B2F-A324-2C608452E110}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devlin.PayPalz.Domain.UnitTests", "tests\Devlin.PayPalz.UnitTests\Devlin.PayPalz.Domain.UnitTests.csproj", "{88C5F810-B630-44A2-A087-243A782AD2CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devlin.PayPalz.SharedKernel", "src\Devlin.PayPalz.SharedKernel\Devlin.PayPalz.SharedKernel.csproj", "{7B2E0A7B-6663-4397-97DE-2279C2D17148}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devlin.PayPalz.Application", "src\Devlin.PayPalz.Application\Devlin.PayPalz.Application.csproj", "{B774D23A-F811-40F2-9BDF-070A863ECB0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{CA8C497F-FFAB-4D71-BD78-696F301A9EC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{41CC171F-B9DC-4A25-8ECB-7D3A0A990DA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{A0561C57-0F29-4466-AE9A-E6AE2750F8D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{D09F516D-05C3-4EF0-82A6-9C7C6F677AF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devlin.PayPalz.Application.UnitTests", "tests\Devlin.PayPalz.Application.UnitTests\Devlin.PayPalz.Application.UnitTests.csproj", "{73C100DE-23FC-4342-A54D-7037AD0920A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devlin.PayPalz.Api", "src\Devlin.PayPalz.Api\Devlin.PayPalz.Api.csproj", "{63943C01-074F-4CD2-AB23-6495FE596369}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2173823E-2B3C-4288-AA4D-F3CB061E0B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2173823E-2B3C-4288-AA4D-F3CB061E0B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2173823E-2B3C-4288-AA4D-F3CB061E0B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2173823E-2B3C-4288-AA4D-F3CB061E0B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F428927-74A3-4183-A700-276CEEAA56E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F428927-74A3-4183-A700-276CEEAA56E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F428927-74A3-4183-A700-276CEEAA56E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F428927-74A3-4183-A700-276CEEAA56E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC47D9CC-A264-4B2F-A324-2C608452E110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC47D9CC-A264-4B2F-A324-2C608452E110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC47D9CC-A264-4B2F-A324-2C608452E110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC47D9CC-A264-4B2F-A324-2C608452E110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88C5F810-B630-44A2-A087-243A782AD2CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88C5F810-B630-44A2-A087-243A782AD2CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88C5F810-B630-44A2-A087-243A782AD2CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C5F810-B630-44A2-A087-243A782AD2CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B2E0A7B-6663-4397-97DE-2279C2D17148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B2E0A7B-6663-4397-97DE-2279C2D17148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B2E0A7B-6663-4397-97DE-2279C2D17148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B2E0A7B-6663-4397-97DE-2279C2D17148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B774D23A-F811-40F2-9BDF-070A863ECB0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B774D23A-F811-40F2-9BDF-070A863ECB0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B774D23A-F811-40F2-9BDF-070A863ECB0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B774D23A-F811-40F2-9BDF-070A863ECB0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C100DE-23FC-4342-A54D-7037AD0920A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C100DE-23FC-4342-A54D-7037AD0920A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C100DE-23FC-4342-A54D-7037AD0920A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C100DE-23FC-4342-A54D-7037AD0920A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63943C01-074F-4CD2-AB23-6495FE596369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63943C01-074F-4CD2-AB23-6495FE596369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63943C01-074F-4CD2-AB23-6495FE596369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63943C01-074F-4CD2-AB23-6495FE596369}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2173823E-2B3C-4288-AA4D-F3CB061E0B8E} = {CA8C497F-FFAB-4D71-BD78-696F301A9EC7}
+		{4F428927-74A3-4183-A700-276CEEAA56E8} = {D09F516D-05C3-4EF0-82A6-9C7C6F677AF4}
+		{EC47D9CC-A264-4B2F-A324-2C608452E110} = {A0561C57-0F29-4466-AE9A-E6AE2750F8D4}
+		{88C5F810-B630-44A2-A087-243A782AD2CE} = {C07888BA-58CF-4EF3-8E8D-A1E53862EE09}
+		{7B2E0A7B-6663-4397-97DE-2279C2D17148} = {A0561C57-0F29-4466-AE9A-E6AE2750F8D4}
+		{B774D23A-F811-40F2-9BDF-070A863ECB0C} = {41CC171F-B9DC-4A25-8ECB-7D3A0A990DA8}
+		{CA8C497F-FFAB-4D71-BD78-696F301A9EC7} = {0D2A47BE-EA9B-41DF-A5D0-5E0A6235A9F5}
+		{41CC171F-B9DC-4A25-8ECB-7D3A0A990DA8} = {0D2A47BE-EA9B-41DF-A5D0-5E0A6235A9F5}
+		{A0561C57-0F29-4466-AE9A-E6AE2750F8D4} = {0D2A47BE-EA9B-41DF-A5D0-5E0A6235A9F5}
+		{D09F516D-05C3-4EF0-82A6-9C7C6F677AF4} = {0D2A47BE-EA9B-41DF-A5D0-5E0A6235A9F5}
+		{73C100DE-23FC-4342-A54D-7037AD0920A7} = {C07888BA-58CF-4EF3-8E8D-A1E53862EE09}
+		{63943C01-074F-4CD2-AB23-6495FE596369} = {CA8C497F-FFAB-4D71-BD78-696F301A9EC7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65AC1BF9-8F22-4608-B8C4-A0F0A605666E}
+	EndGlobalSection
+EndGlobal

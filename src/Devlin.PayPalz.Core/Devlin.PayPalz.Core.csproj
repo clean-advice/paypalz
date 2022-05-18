@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFramework>net6.0</TargetFramework>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	<!-- Explicitly generate Assembly Info -->
+	<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	<TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	<TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<Compile Remove="Services\**" />
+	<EmbeddedResource Remove="Services\**" />
+	<None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<ProjectReference Include="..\Devlin.PayPalz.SharedKernel\Devlin.PayPalz.SharedKernel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<AdditionalFiles Include="..\..\DependencyValidation\CleanArchDependencyValidation.layerdiagram" Link="CleanArchDependencyValidation.layerdiagram">
+	  <Visible>False</Visible>
+	</AdditionalFiles>
+  </ItemGroup>
+
+  <ItemGroup>
+	<AdditionalFiles Include="..\..\DependencyValidation\CleanArchDependencyValidation.layerdiagram" Link="CleanArchDependencyValidation.layerdiagram">
+	  <Visible>False</Visible>
+	</AdditionalFiles>
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Ardalis.GuardClauses" Version="4.0.1" />
+	<PackageReference Include="Ardalis.SmartEnum" Version="2.1.0" />
+	<PackageReference Include="Ardalis.Specification" Version="6.0.1" />
+	<PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
+	<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
+	<PackageReference Include="Serilog" Version="2.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+	  <_Parameter1>Devlin.PayPalz.Domain.UnitTests</_Parameter1>
+	</AssemblyAttribute>
+  </ItemGroup>
+
+</Project>
