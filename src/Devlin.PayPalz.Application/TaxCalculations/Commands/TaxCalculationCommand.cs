@@ -1,4 +1,5 @@
 ﻿using Devlin.PayPalz.Core.TaxCalculation;
+using Devlin.PayPalz.Core.TaxCalculation.Exceptions;
 using Devlin.PayPalz.Core.TaxCalculation.Services;
 using Devlin.PayPalz.SharedKernel.Interfaces;
 
@@ -24,16 +25,22 @@ namespace Devlin.PayPalz.Application.TaxCalculations.Commands
             CancellationToken cancellationToken = default(CancellationToken))
         {
             TaxCalculationResult? calculationResult = _taxCalculationService.CalculateTax(new PostalCode(postalCode), new AnnualIncome(annualSalary));
-            await _repository.AddAsync(calculationResult, cancellationToken);
 
-            var taxCalculationResultDto = new TaxCalculationResultDto()
+            if (calculationResult is not null && calculationResult.TaxPayable is not null)
+            {
+                await _repository.AddAsync(calculationResult, cancellationToken);
+
+                var taxCalculationResultDto = new TaxCalculationResultDto()
                 {
-                    PostalCode = calculationResult.PostalCode.Code,
+                    PostalCode = postalCode,
                     Salary = annualSalary,
                     TaxPayable = calculationResult.TaxPayable.Amount
                 };
 
-            return taxCalculationResultDto;
+                return taxCalculationResultDto;
+            }
+
+            throw new TaxCalculationFailedException("Tax calculation returned no result.", new NullReferenceException(nameof(calculationResult)));
         }
     }
 }

@@ -24,11 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Devlin.PayPalz.Api.Contracts\Devlin.PayPalz.Api.Contracts.csproj" />
     <ProjectReference Include="..\Devlin.PayPalz.Application\Devlin.PayPalz.Application.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Repr\" />
   </ItemGroup>
 
   <ItemGroup>

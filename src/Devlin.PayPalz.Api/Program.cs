@@ -4,6 +4,7 @@ using Devlin.PayPalz.Application.Bootstrap;
 using Devlin.PayPalz.Infrastructure;
 using Devlin.PayPalz.Infrastructure.Bootstrap;
 using Devlin.PayPalz.Infrastructure.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
 using Serilog;
 
@@ -14,6 +15,10 @@ builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Host.UseSerilog((_, config) => config.ReadFrom.Configuration(builder.Configuration));
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+{
+    options.SuppressModelStateInvalidFilter = true;
+});
 
 string connectionString = builder.Configuration.GetConnectionString("SqliteConnection");  //Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext(connectionString);
@@ -51,9 +56,7 @@ else
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
 if (app.Environment.IsDevelopment())
@@ -66,7 +69,7 @@ if (app.Environment.IsDevelopment())
         try
         {
             var context = services.GetRequiredService<AppDbContext>();
-            //                    context.Database.Migrate();
+            // context.Database.Migrate(); // If domain has changed
             context.Database.EnsureCreated();
         }
         catch (Exception ex)

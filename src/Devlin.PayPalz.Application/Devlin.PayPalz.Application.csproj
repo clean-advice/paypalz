@@ -13,6 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="TaxCalculations\Commands\ITaxCalculationCommand.cs" />
+    <Compile Remove="TaxCalculations\Commands\TaxCalculationResultDto.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="TaxCalculationTypeMappings\Commands\" />
     <Folder Include="TaxCalculations\Queries\" />
   </ItemGroup>
@@ -25,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Devlin.PayPalz.Api.Contracts\Devlin.PayPalz.Api.Contracts.csproj" />
     <ProjectReference Include="..\Devlin.PayPalz.Core\Devlin.PayPalz.Core.csproj" />
     <ProjectReference Include="..\Devlin.PayPalz.Infrastructure\Devlin.PayPalz.Infrastructure.csproj" />
   </ItemGroup>
