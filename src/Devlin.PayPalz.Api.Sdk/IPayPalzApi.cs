@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 [assembly: Policy("TransientHttpError")]
 namespace Devlin.PayPalz.Api.Sdk
 {
-    [WebApi("https://paypalz.dev/"), Cache, Log]
-    internal interface IPayPalzApi
+    public interface IPayPalzApi
     {
+
     }
 }

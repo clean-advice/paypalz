@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="c267f783-4d0b-486f-a179-394364ac5353" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="023f42af-438a-46f0-be4c-63e03b018457" name="API">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="9c41c681-7e88-481c-9939-caf45b428ec1" direction="Forward">
+          <layerMoniker Id="bc403f9e-38aa-4e29-b113-144093ec3d2e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="67c85f08-3031-4dcd-a3fa-38145a7d4712" name="Web Api">
+          <references>
+            <reference Id="ecb4dc02-f339-4263-bbea-06819656f8b2" name="Devlin.PayPalz.Api.dll">
+              <ArtifactNode Label="Devlin.PayPalz.Api.dll" Category="CodeSchema_Assembly" Id="(Assembly=../src/Devlin.PayPalz.Api/bin/Debug/net6.0/Devlin.PayPalz.Api.dll)" />
+              <ExpandedNode Id="(Assembly=Devlin.PayPalz.Api)" Label="Devlin.PayPalz.Api.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="ce8ecd1b-34c4-4c59-bf00-821c00f18378" name="Domain">
+      <childLayers>
+        <layer Id="f781f4b2-4293-4e79-882e-749e6b23eede" name="Core">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="efe40cc6-9576-47e7-bb9f-184dfc786c64" direction="Forward">
+              <layerMoniker Id="1cae8391-a6fb-476c-a341-65ee7e6d50cc" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="1c2efe84-ceeb-4cc7-a7c5-0414c3c11216" name="Devlin.PayPalz.Core.dll">
+              <ArtifactNode Label="Devlin.PayPalz.Core.dll" Category="CodeSchema_Assembly" Id="(Assembly=../src/Devlin.PayPalz.Core/bin/Debug/net6.0/Devlin.PayPalz.Core.dll)" />
+              <ExpandedNode Id="(Assembly=Devlin.PayPalz.Core)" Label="Devlin.PayPalz.Core.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="1cae8391-a6fb-476c-a341-65ee7e6d50cc" name="SharedKernel">
+          <references>
+            <reference Id="4a635b3e-46c0-4c38-be6e-c7a14e777da8" name="Devlin.PayPalz.SharedKernel.dll">
+              <ArtifactNode Label="Devlin.PayPalz.SharedKernel.dll" Category="CodeSchema_Assembly" Id="(Assembly=../src/Devlin.PayPalz.SharedKernel/bin/Debug/net6.0/Devlin.PayPalz.SharedKernel.dll)" />
+              <ExpandedNode Id="(Assembly=Devlin.PayPalz.SharedKernel)" Label="Devlin.PayPalz.SharedKernel.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="db803ca1-32ff-49da-8226-00855e29625c" name="Domain UnitTests">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="8bcb371a-a094-4d09-a3be-858c1b94d402" direction="Forward">
+          <layerMoniker Id="ce8ecd1b-34c4-4c59-bf00-821c00f18378" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="2e7959f7-ff11-4dc3-afef-5f20574ec982" name="Devlin.PayPalz.UnitTests">
+          <ArtifactNode Label="Devlin.PayPalz.UnitTests" Category="CodeSchema_Project" Id="(Assembly=../tests/Devlin.PayPalz.UnitTests/Devlin.PayPalz.UnitTests.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Devlin.PayPalz.UnitTests)" Label="Devlin.PayPalz.UnitTests.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="e643d5eb-4b05-48e6-9bea-c114a821baef" name="Infrastructure">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="705f5768-0000-4809-a66b-684c5eda046b" direction="Forward">
+          <layerMoniker Id="bc403f9e-38aa-4e29-b113-144093ec3d2e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="b49f9167-b998-4368-90fd-7d38c15f7748" name="Devlin.PayPalz.Infrastructure.dll">
+          <ArtifactNode Label="Devlin.PayPalz.Infrastructure.dll" Category="CodeSchema_Assembly" Id="(Assembly=../src/Devlin.PayPalz.Infrastructure/bin/Debug/net6.0/Devlin.PayPalz.Infrastructure.dll)" />
+          <ExpandedNode Id="(Assembly=Devlin.PayPalz.Infrastructure)" Label="Devlin.PayPalz.Infrastructure.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="bb43ed85-2a42-4269-86aa-b92164730c61" name="Web UI">
+      <references>
+        <reference Id="d7ee7ce8-8528-435b-b3ff-ba8f0b7edfa1" name="Devlin.PayPalz.Web.dll">
+          <ArtifactNode Label="Devlin.PayPalz.Web.dll" Category="CodeSchema_Assembly" Id="(Assembly=../src/Devlin.PayPalz.Web/bin/Debug/net6.0/Devlin.PayPalz.Web.dll)" />
+          <ExpandedNode Id="(Assembly=Devlin.PayPalz.Web)" Label="Devlin.PayPalz.Web.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="bc403f9e-38aa-4e29-b113-144093ec3d2e" name="Application">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="aae1a3a9-3c47-45b3-9f1f-1958d9995d32" direction="Forward">
+          <layerMoniker Id="ce8ecd1b-34c4-4c59-bf00-821c00f18378" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="eb3432e3-ebd6-4069-af5a-c180b6515293" name="Devlin.PayPalz.Application">
+          <ArtifactNode Label="Devlin.PayPalz.Application" Category="CodeSchema_Project" Id="(Assembly=../src/Devlin.PayPalz.Application/Devlin.PayPalz.Application.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Devlin.PayPalz.Application)" Label="Devlin.PayPalz.Application.dll" Category="CodeSchema_Assembly">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

@@ -369,3 +369,7 @@ ASALocalRun/
 
 # User Configs
 *.gz
+/src/Devlin.PayPalz.Api/*.txt
+/src/Devlin.PayPalz.Api/*.sqlite-shm
+/src/Devlin.PayPalz.Api/*.sqlite-wal
+*.txt

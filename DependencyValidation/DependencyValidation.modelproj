@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15238572-688d-4b9c-991b-508ef5f2981f}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>DependencyValidation</Name>
+    <RootNamespace>DependencyValidation</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Validate Include="CleanArchDependencyValidation.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="CleanArchDependencyValidation.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CleanArchDependencyValidation.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="CleanArchDependencyValidation.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>CleanArchDependencyValidation.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\src\Devlin.PayPalz.Api\Devlin.PayPalz.Api.csproj">
+      <Name>Devlin.PayPalz.Api</Name>
+      <Project>{a33319d2-7462-4c1c-aaa8-268c1fe0316d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\src\Devlin.PayPalz.Application\Devlin.PayPalz.Application.csproj">
+      <Name>Devlin.PayPalz.Application</Name>
+      <Project>{b774d23a-f811-40f2-9bdf-070a863ecb0c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\src\Devlin.PayPalz.Core\Devlin.PayPalz.Core.csproj">
+      <Name>Devlin.PayPalz.Core</Name>
+      <Project>{ec47d9cc-a264-4b2f-a324-2c608452e110}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\src\Devlin.PayPalz.Infrastructure\Devlin.PayPalz.Infrastructure.csproj">
+      <Name>Devlin.PayPalz.Infrastructure</Name>
+      <Project>{4f428927-74a3-4183-a700-276ceeaa56e8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\src\Devlin.PayPalz.SharedKernel\Devlin.PayPalz.SharedKernel.csproj">
+      <Name>Devlin.PayPalz.SharedKernel</Name>
+      <Project>{7b2e0a7b-6663-4397-97de-2279c2d17148}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\src\Devlin.PayPalz.Web\Devlin.PayPalz.Web.csproj">
+      <Name>Devlin.PayPalz.Web</Name>
+      <Project>{2173823e-2b3c-4288-aa4d-f3cb061e0b8e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\tests\Devlin.PayPalz.UnitTests\Devlin.PayPalz.Domain.UnitTests.csproj">
+      <Name>Devlin.PayPalz.Domain.UnitTests</Name>
+      <Project>{88c5f810-b630-44a2-a087-243a782ad2ce}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>
